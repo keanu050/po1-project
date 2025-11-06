@@ -1,6 +1,4 @@
-/* ...existing code... */
 
-/* Full-page gaming background with dark overlay for readability */
 body {
     margin: 0;
     min-height: 100vh;
@@ -45,3 +43,32 @@ button:hover {
     color: #fff;
 }
 
+body {
+    margin: 0;
+    min-height: 100vh;
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+                url("../img/games-cloud-gaming-environment\ \(1\).webp") center/cover no-repeat fixed;
+    font-family: Arial, sans-serif;
+    color: #fff;
+}
+
+#quiz-container {
+    background: rgba(255, 255, 255, 0.9);
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.5);
+}
+
+header h1 {
+    text-align: center;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    padding: 20px;
+}
+
+.antwoord {
+    background: white;
+    color: #000;
+}

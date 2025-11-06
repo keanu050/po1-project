@@ -1,4 +1,4 @@
-// ...existing code...
+
 const questions = [
   { q: "What is the most popular game in the world?", a: ["Minecraft","Fortnite","Among Us","Roblox"], correct: 0 },
   { q: "In what year was the first Mario game released?", a: ["1981","1985","1983","1980"], correct: 2 },
