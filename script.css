@@ -1,5 +1,21 @@
-h3 {text-align: center;background-color: white;color: blue;}
-h1 {color:blue;}
+h2 {text-align: center;background-color: white;color: blue;}
+#tweedeline {color:blue; text-align: center;}
     body{background-color: lightblue}
+
+.monkey {color: lightblue;
+text-align: center;}
+
+
+#button1:hover {
+    color:red;
+}
+
+#button2:hover{
+    color:red
+}
+
+
+#naaminvoer {margin-left: 680px;}
+
 
 
