@@ -1,31 +1,32 @@
+// filepath: [software.js](http://_vscodecontentref_/3)
 const questions = [
-  { q: "What is the most popular game in the world?", a:["Minecraft","Fortnite","Among Us","Roblox"], correct:0 },
-  { q: "In what year was the first Mario game released?", a:["1981","1985","1983","1980"], correct:2 },
-  { q: "Which studio developed The Legend of Zelda?", a:["Nintendo","Sega","Square Enix","Konami"], correct:0 },
-  { q: "What is the best-selling console ever?", a:["PlayStation 2","Nintendo DS","Game Boy","PlayStation 4"], correct:0 },
-  { q: "Which game popularized the Battle Royale genre?", a:["PUBG","Fortnite","H1Z1","Apex Legends"], correct:0 },
-  { q: "Who is the main character in the Halo series?", a:["Master Chief","Cortana","The Arbiter","Guilty Spark"], correct:0 },
-  { q: "In which game does the enemy 'Creeper' appear?", a:["Minecraft","Terraria","Roblox","Fortnite"], correct:0 },
-  { q: "In which year did Fortnite officially release?", a:["2017","2016","2018","2019"], correct:0 },
-  { q: "What color is Pac-Man?", a:["Yellow","Blue","Red","Green"], correct:0 },
-  { q: "Which franchise uses the phrase 'War. War never changes.'?", a:["Fallout","Doom","Skyrim","Bioshock"], correct:0 },
-  { q: "Which franchise features Lara Croft?", a:["Tomb Raider","Uncharted","Metroid","Assassin's Creed"], correct:0 },
-  { q: "Which studio made Half-Life?", a:["Valve","id Software","Bungie","Epic Games"], correct:0 },
-  { q: "Which studio made Minecraft?", a:["Mojang","Rare","Naughty Dog","Bethesda"], correct:0 },
-  { q: "On which platform do you find exclusives like God of War and Uncharted?", a:["PlayStation","Xbox","Nintendo Switch","PC"], correct:0 },
-  { q: "Which developer made Doom (1993)?", a:["id Software","Valve","Bethesda","Capcom"], correct:0 },
-  { q: "Which game franchise is about catching and training creatures?", a:["Pokémon","Digimon","Monster Hunter","Yo-kai Watch"], correct:0 },
-  { q: "Which studio developed Skyrim?", a:["Bethesda Game Studios","Rockstar","Ubisoft","BioWare"], correct:0 },
-  { q: "Which indie game was made by Jonathan Blow?", a:["Braid","Limbo","Fez","Inside"], correct:0 },
-  { q: "In which game do you build and automate factories with conveyor belts?", a:["Factorio","Satisfactory","Minecraft","Terraria"], correct:0 },
-  { q: "Which game is known for its speedrun community and classic platform levels?", a:["Super Mario Bros.","The Sims","Civilization","Farming Simulator"], correct:0 }
+  { q: "What does HTML stand for?", a:["Hypertext Markup Language","High Text Making Language","Hypertext Making Links","High Text Markup Language"], correct:0 },
+  { q: "Which language is considered low-level and close to hardware?", a:["Assembly","Python","Ruby","JavaScript"], correct:0 },
+  { q: "What does CSS stand for?", a:["Cascading Style Sheets","Computer Style Sheets","Creative Style System","Colorful Style Sheets"], correct:0 },
+  { q: "Which of these is NOT a JavaScript framework?", a:["Django","Angular","Vue","React"], correct:0 },
+  { q: "What is the primary purpose of SQL?", a:["Database queries and management","Web Design","Mobile Development","Game Development"], correct:0 },
+  { q: "Which symbol comments a single line in JavaScript?", a:["//","/*","<!--","#"], correct:0 },
+  { q: "What does API stand for?", a:["Application Programming Interface","Advanced Program Integration","Application Process Interface","Advanced Programming Input"], correct:0 },
+  { q: "Which data structure is LIFO?", a:["Stack","Queue","Array","Tree"], correct:0 },
+  { q: "What is Git primarily used for?", a:["Version control","Web hosting","Database management","Code compilation"], correct:0 },
+  { q: "Which is a backend language?", a:["PHP","HTML","CSS","Bootstrap"], correct:0 },
+  { q: "What does IDE stand for?", a:["Integrated Development Environment","Interface Development Environment","Integrated Design Environment","Internal Development Engine"], correct:0 },
+  { q: "How do you print to console in Python?", a:["print()","console.log()","echo","System.out.println()"], correct:0 },
+  { q: "What is the correct extension for JavaScript files?", a:[".js",".javascript",".jsx",".java"], correct:0 },
+  { q: "Which HTTP method sends data to the server to create a resource?", a:["POST","GET","DELETE","PUT"], correct:0 },
+  { q: "What is the purpose of a constructor in OOP?", a:["Initialize objects","Delete objects","Copy objects","Compare objects"], correct:0 },
+  { q: "Which operator is logical AND in most languages?", a:["&&","||","!","&|"], correct:0 },
+  { q: "What is JSON mainly used for?", a:["Data exchange","Styling","Programming","Database storage"], correct:0 },
+  { q: "Which is a valid JavaScript variable name?", a:["myVariable","2variable","@variable","my-variable"], correct:0 },
+  { q: "What does DOM stand for?", a:["Document Object Model","Data Object Model","Document Oriented Model","Digital Object Model"], correct:0 },
+  { q: "Which HTML tag creates a link?", a:["<a>","<link>","<href>","<url>"], correct:0 }
 ];
 
 let index = 0;
 let selected = null;
 let fiftyUsed = false;
-let correctAnswers = 0; 
-let wrongAnswers = 0; 
+let correctAnswers = 0; // Track correct answers
+let wrongAnswers = 0; // Track wrong answers
 
 const qEl = document.getElementById('Vraag');
 const answerBtns = Array.from(document.querySelectorAll('.antwoord'));
@@ -44,7 +45,7 @@ if (!nextBtn) {
 
 function render() {
   const q = questions[index];
-  qEl.textContent = q.q;    
+  qEl.textContent = q.q;
   answerBtns.forEach((btn,i)=>{
     btn.textContent = q.a[i] || '';
     btn.disabled = false;
@@ -112,7 +113,6 @@ nextBtn.addEventListener('click', ()=>{
   }
 });
 
-// 50/50 logic
 if (fiftyBtn) {
   fiftyBtn.addEventListener('click', ()=>{
     if (fiftyUsed) return;

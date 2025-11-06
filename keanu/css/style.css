@@ -18,14 +18,11 @@ body {
     box-shadow: 0 6px 18px rgba(0,0,0,0.4);
 }
 
-/* Header styling */
 header {
     text-align: center;
     padding: 20px 0;
     color: #fff;
 }
-
-/* Button base styles (optional) */
 button {
     display: inline-block;
     margin: 8px;
@@ -72,3 +69,4 @@ header h1 {
     background: white;
     color: #000;
 }
+

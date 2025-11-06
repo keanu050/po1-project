@@ -4,23 +4,24 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Startpagina - Kies een quiz</title>
-  <link rel="stylesheet" href="keanu/css/style.css">
-  <style>
-  body { display:flex; align-items:center; justify-content:center; min-height:100vh; margin:0;
-           font-family: Arial, sans-serif; background:#0b0b0b; color:#fff; }
-    .card { text-align:center; background:rgba(255,255,255,0.03); padding:36px; border-radius:10px; }
-    h1 { margin:0 0 20px 0; color:lightblue; }
-    .choices { display:flex; gap:16px; justify-content:center; flex-wrap:wrap; }
-    .link-btn {
-      display:inline-block; padding:14px 22px; border-radius:8px; text-decoration:none;
-      background:#fff; color:#000; font-weight:600; border:2px solid #007bff;
-    }
-    .link-btn:hover { background:#007bff; color:#fff; }
-    .note { margin-top:12px; font-size:0.9rem; color:#ccc; }
-  </style>   
-  </style>
+  <link rel="stylesheet" href="css/startpagina.css">
 </head>
 <body>
+  <button class="rules-btn" onclick="showRules()">Game Rules</button>
+
+  <div class="overlay" id="overlay"></div>
+  <div class="rules" id="rulesModal">
+    <button class="close-btn" onclick="hideRules()">&times;</button>
+    <h2>Quiz Rules</h2>
+    <ul style="text-align: left">
+      <li>Each quiz contains 20 questions</li>
+      <li>50/50 removes two wrong answers</li>
+      <li>You must select an answer before checking</li>
+      <li>You can't change your answer after checking</li>
+      <li>Each question must be answered to complete the quiz</li>
+    </ul>
+  </div>
+
   <div class="card">
     <h1>Choose a quiz</h1>
     <div class="choices">
@@ -29,5 +30,19 @@
     </div>
     <div class="note">Click a button to open the selected quiz page.</div>
   </div>
+
+  <script>
+    function showRules() {
+      document.getElementById('rulesModal').style.display = 'block';
+      document.getElementById('overlay').style.display = 'block';
+    }
+
+    function hideRules() {
+      document.getElementById('rulesModal').style.display = 'none';
+      document.getElementById('overlay').style.display = 'none';
+    }
+
+    document.getElementById('overlay').onclick = hideRules;
+  </script>
 </body>
 </html>
